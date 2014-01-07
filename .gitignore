@@ -1,11 +1,9 @@
-# Build and Release Folders
-bin/
-bin-debug/
-bin-release/
+# Ignoring the build folder
+build/
 
-# Other files and folders
-.settings/
+# Ignore dev dependencies
+tools/flex-sdk-*
+tools/*.swc
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# OSX Files
+.DS_Store

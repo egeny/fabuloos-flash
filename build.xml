@@ -1,0 +1,26 @@
+<project name="FabuloosFlashRenderer" default="build">
+
+	<!-- Folders -->
+	<property name="build" value="./build" />
+	<property name="src"   value="./src" />
+	<property name="sdk"   value="./tools/flex-sdk-4.11.0" />
+
+	<!-- File to build -->
+	<property name="SWF" value="${build}/${ant.project.name}.swf" />
+
+	<target name="build" description="Build the SWF">
+		<echo message="Compiling (${SWF})" />
+
+		<!-- Makes sure the build folder exists -->
+		<mkdir dir="${build}" />
+
+		<!-- Launch the SWF compilation -->
+		<exec executable="${sdk}/bin/mxmlc">
+			<arg line="-o ${SWF}" />
+			<arg line="-load-config=./tools/flex-config.xml" />
+			<arg line="${src}/${ant.project.name}.as" />
+		</exec>
+
+		<echo message="Compilation done." />
+	</target>
+</project>

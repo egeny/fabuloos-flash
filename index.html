@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>fabuloos Flash sandbox</title>
+
+	<style>
+		body { background: #CCC; }
+		video, object { border: 1px solid #FF017D; }
+	</style>
+</head>
+
+<body>
+	<!--[if (gte IE 9)|!(IE)]><!-->
+	<object id="flash" name="flash" width="1000" height="300" type="application/x-shockwave-flash" data="build/FabuloosFlashRenderer.swf">
+		<param name="allowscriptaccess" value="always" />
+		<param name="wmode" value="transparent" />
+	</object>
+	<!--<![endif]-->
+	<!--[if lt IE 9]>
+	<object id="flash" name="flash" width="1000" height="300" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000">
+		<param name="movie" value="build/FabuloosFlashRenderer.swf" />
+		<param name="allowscriptaccess" value="always" />
+		<param name="wmode" value="transparent" />
+	</object>
+	<![endif]-->
+
+	<script>
+		var flash = document.getElementById("flash");
+	</script>
+</body>
+</html>
