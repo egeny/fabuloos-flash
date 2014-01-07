@@ -24,6 +24,8 @@ After configuring your favorite webserver to serve the folder of this project, s
 
 The player embed a `Console.as` file which allows you to call JavaScript's `console.*` functions. You may want to disable console logging while compiling for production. Just have a look at `Console.as` on line 9.
 
+It is also recommended to install a [Flash player content debugger](http://www.adobe.com/support/flashplayer/downloads.html).
+
 # Interface
 
 Here are the methods exposed by the player:
