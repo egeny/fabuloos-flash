@@ -1,4 +1,4 @@
-<project name="FabuloosFlashRenderer" default="build">
+<project name="FabFlashRenderer" default="build">
 
 	<!-- Folders -->
 	<property name="build" value="./build" />

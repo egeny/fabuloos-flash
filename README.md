@@ -2,7 +2,7 @@
 
 This project is a part of the [fabuloos' project](http://fabuloos.org).
 
-This Flash fallback implement the [HTML5's media specification](http://dev.w3.org/html5/spec-author-view/video.html) (well, not completely for the moment). It is used in the [fabuloos-js](https://github.com/egeny/fabuloos-js) project with its [associated renderer](https://github.com/egeny/fabuloos-js/blob/master/src/renderers/FabuloosFlashRenderer.js).
+This Flash fallback implement the [HTML5's media specification](http://dev.w3.org/html5/spec-author-view/video.html) (well, not completely for the moment). It is used in the [fabuloos-js](https://github.com/egeny/fabuloos-js) project with its [associated renderer](https://github.com/egeny/fabuloos-js/blob/master/src/renderers/FabFlashRenderer.js).
 
 
 # How to build
@@ -15,11 +15,11 @@ In order to compile, you need to install some dependencies:
 4. [Apache Ant](http://ant.apache.org/) must be installed on your system. It may be already installed, try launching `ant -v` in a terminal console before making anything foolish.
 
 When all the dependencies are installed, simply launch `ant` in a terminal console.  
-It will build the sources and create a `FabuloosFlashRenderer.swf` file in the `build` folder.
+It will build the sources and create a `FabFlashRenderer.swf` file in the `build` folder.
 
 # How to test
 
-Since FabuloosFlashRenderer use ExternalInterface, you need to use it via a webserver.  
+Since FabFlashRenderer use ExternalInterface, you need to use it via a webserver.  
 After configuring your favorite webserver to serve the folder of this project, simply browse to it. The `index.html` file contain the basic markup to embed the Flash object.
 
 The player embed a `Console.as` file which allows you to call JavaScript's `console.*` functions. You may want to disable console logging while compiling for production. Just have a look at `Console.as` on line 9.
@@ -46,7 +46,7 @@ The player will try to call these JavaScript methods:
 These two methods will be called on the “bridge” ; the renderer who created the `<object>`. By default the bridge is set to :
 
 ```
-Renderer.FabuloosFlashRenderer.instances[" <object>'s id "];
+Renderer.FabFlashRenderer.instances[" <object>'s id "];
 ```
 
 So, if you want to test that the player call `ready()` or `trigger()` you will have to add this kind of code in your JavaScript:
@@ -62,7 +62,7 @@ var
 		}
 	},
 	Renderer = {
-		FabuloosFlashRenderer: {
+		FabFlashRenderer: {
 			instances: {
 				flash: renderer
 			}

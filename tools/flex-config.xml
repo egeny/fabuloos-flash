@@ -172,7 +172,7 @@
 
 	<!-- Metadata added to SWFs via the SWF Metadata tag. -->
 	<metadata>
-		<title>FabuloosFlashRenderer</title>
+		<title>FabFlashRenderer</title>
 		<description>http://fabuloos.org/</description>
 		<publisher>eGeny</publisher>
 		<creator>eGeny</creator>

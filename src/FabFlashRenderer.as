@@ -24,7 +24,7 @@ package {
 	import Console;
 
 
-	public class FabuloosFlashRenderer extends Sprite {
+	public class FabFlashRenderer extends Sprite {
 
 		// Error states constants
 		private const MEDIA_ERR_ABORTED:uint           = 1;
@@ -87,8 +87,8 @@ package {
 		// TODO
 
 		// The bridge to use to communicate with the renderer
-		// Use Renderer.FabuloosFlashRenderer since Renderer should be the only class exposed
-		private static var BRIDGE:String = 'Renderer.FabuloosFlashRenderer.instances["' + ExternalInterface.objectID + '"]';
+		// Use Renderer.FabFlashRenderer since Renderer should be the only class exposed
+		private static var BRIDGE:String = 'Renderer.FabFlashRenderer.instances["' + ExternalInterface.objectID + '"]';
 
 		// Media objects (OSMF)
 		private var sprite:MediaPlayerSprite = new MediaPlayerSprite();
@@ -96,10 +96,10 @@ package {
 
 
 		/**
-		 * The main FabuloosFlashRenderer constructor
+		 * The main FabFlashRenderer constructor
 		 * @constructor
 		 */
-		public function FabuloosFlashRenderer():void {
+		public function FabFlashRenderer():void {
 			Console.info("Bridge: " + BRIDGE);
 
 			var version:* = Capabilities.version.replace(/(WIN|MAC|UNIX) /, "").split(",");
@@ -109,7 +109,7 @@ package {
 
 			// Wait for the stage to be available
 			this.addEventListener(Event.ADDED_TO_STAGE, init);
-		} // end of FabuloosFlashRenderer()
+		} // end of FabFlashRenderer()
 
 
 		/**
